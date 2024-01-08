@@ -1,0 +1,15 @@
+[Unit]
+Description=BOT_Securyty
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/bot_kraft/security_bot/
+ExecStart=/root/bot_kraft/security_bot/venv/bin/python3 /root/bot_kraft/security_bot/Security_BOT.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
