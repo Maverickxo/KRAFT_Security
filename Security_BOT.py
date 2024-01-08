@@ -134,7 +134,7 @@ async def solve_task(message: types.Message):
 
         await process_reply_msg_delete(message,
                                        f"Правильно! Вы решили задачу.\n"
-                                       f"Добро пожаловать! "
+                                       f"Добро пожаловать!"
                                        f"[{user_name}](tg://user?id={user_id})", 20)
 
     elif user_id in tasks:

@@ -1,5 +1,5 @@
-# API_TOKEN = '6907605835:AAGJj6H4lN8fmjASVy9_7MIAFk3ly3dHQik'#рабочий
-API_TOKEN = '6629882439:AAEDVRnFhy6KQ_jTx-E71u4GLdOxgGTNo2E'
+API_TOKEN = '6907605835:AAGJj6H4lN8fmjASVy9_7MIAFk3ly3dHQik'#рабочий
+# API_TOKEN = '6629882439:AAEDVRnFhy6KQ_jTx-E71u4GLdOxgGTNo2E'
 time_kick = 60
 
 # reply_text = (f'🔴          🔴          🔴          🔴\n'

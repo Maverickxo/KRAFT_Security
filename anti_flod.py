@@ -1,4 +1,4 @@
-import datetime
+from date_time_online import online_date_time
 from collections import defaultdict
 import time
 from aiogram import Bot, types
@@ -28,7 +28,8 @@ async def clear_old_messages():
         # Удаляем ключи из словаря
         for key in keys_to_remove:
             del last_messages[key]
-        print('*', datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        data_time_chat_flood = online_date_time()
+        print('*', data_time_chat_flood)
         for data in last_messages.values():
             print(f"Пользователь: {data['user_name']} | Сообщений: {data['count']} | До мута: {data['mute_count']}")
 

@@ -1,12 +1,12 @@
 from connect_bd import DatabaseConnection
-import datetime
+from date_time_online import online_date_time
 
 
 def new_chat_users(user_id, full_name):
     try:
         # Установка соединения с базой данных и создание курсора с помощью контекстного менеджера
         with DatabaseConnection() as cursor:
-            data_time_new_chat = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            data_time_new_chat = online_date_time()
 
             cursor.execute('SELECT user_id FROM new_users_chat WHERE user_id  = %s', (user_id,))
             user_exst = cursor.fetchone()
@@ -29,7 +29,7 @@ def lv_chat_users(user_id):
     try:
         # Установка соединения с базой данных и создание курсора с помощью контекстного менеджера
         with DatabaseConnection() as cursor:
-            data_time_left_chat = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            data_time_left_chat = online_date_time()
 
             cursor.execute('SELECT user_id FROM new_users_chat WHERE user_id = %s', (user_id,))
             user_exists = cursor.fetchone()
